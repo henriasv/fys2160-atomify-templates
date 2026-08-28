@@ -18,6 +18,12 @@ The examples are the *startup* set from [dysthe/atomify](https://github.com/dyst
 ported to the current Atomify (the July 2026 rewrite with persistent projects,
 run history and a shared Jupyter filesystem).
 
+**Use Chrome or Firefox.** Safari cannot run Atomify's simulation engine at the
+moment (Atomify needs cross-origin isolation for `SharedArrayBuffer` and asks
+for it with `COEP: credentialless`, which Safari does not support): the
+examples load, but the engine stalls at "Engine loading…" with a
+`DataCloneError` in the console.
+
 ## How an example is used in Atomify
 
 1. Open the link above and pick an example. **Quick run** runs it immediately in a
