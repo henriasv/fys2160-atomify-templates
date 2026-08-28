@@ -1,0 +1,98 @@
+{
+  "baseUrl": "https://raw.githubusercontent.com/henriasv/fys2160-atomify-templates/main",
+  "title": "FYS2160 Thermal and statistical physics: examples and projects in Atomify",
+  "descriptionFile": "description.md",
+  "examples": [
+    {
+      "id": "my-first-md-simulation",
+      "title": "My first MD simulation",
+      "description": "We try out different settings and analyze the output.",
+      "analysisDescription": "# About this simulation\nWe try out different settings and analyze the output.",
+      "imageUrl": "my-first-md-simulation/my-first-md-simulation.jpg",
+      "inputScript": "my-first-md-simulation.in",
+      "keywords": [
+        "getting started",
+        "lennard jones",
+        "2-sided box"
+      ],
+      "files": [
+        {
+          "fileName": "my-first-md-simulation.in",
+          "url": "my-first-md-simulation/my-first-md-simulation.in"
+        },
+        {
+          "fileName": "my-first-md-simulation.ipynb",
+          "url": "my-first-md-simulation/my-first-md-simulation.ipynb"
+        }
+      ]
+    },
+    {
+      "id": "2d-melting",
+      "title": "Melting of a 2D solid",
+      "description": "A quick and dirty demo of freezing, melting and evaporation.",
+      "analysisDescription": "# About this simulation\nA quick and dirty demo of freezing, melting and evaporation.",
+      "imageUrl": "2d-melting/2d-melting.jpg",
+      "inputScript": "2d-melting.in",
+      "keywords": [
+        "phase transitions",
+        "lennard jones",
+        "melting"
+      ],
+      "files": [
+        {
+          "fileName": "2d-melting.in",
+          "url": "2d-melting/2d-melting.in"
+        },
+        {
+          "fileName": "2d-melting.ipynb",
+          "url": "2d-melting/2d-melting.ipynb"
+        }
+      ]
+    },
+    {
+      "id": "heat-capacity-lj",
+      "title": "Heat capacity of LJ",
+      "description": "A quick and dirty simulation to obtain the heat capacity.",
+      "analysisDescription": "# About this simulation\nA quick and dirty simulation to obtain the heat capacity.",
+      "imageUrl": "heat-capacity-lj/heat-capacity-lj.jpg",
+      "inputScript": "heat-capacity-lj.in",
+      "keywords": [
+        "heat capacity",
+        "lennard jones"
+      ],
+      "files": [
+        {
+          "fileName": "heat-capacity-lj.in",
+          "url": "heat-capacity-lj/heat-capacity-lj.in"
+        },
+        {
+          "fileName": "heat-capacity-lj.ipynb",
+          "url": "heat-capacity-lj/heat-capacity-lj.ipynb"
+        }
+      ]
+    },
+    {
+      "id": "3d-msd-diffusion",
+      "title": "3D diffusion MSD",
+      "description": "We measure the diffusion coefficient using the mean square displacement.",
+      "analysisDescription": "# About this simulation\nWe measure the diffusion coefficient using the mean square displacement.",
+      "imageUrl": "3d-msd-diffusion/3d-msd-diffusion.jpg",
+      "inputScript": "3d-msd-diffusion.in",
+      "keywords": [
+        "diffusion",
+        "lennard jones",
+        "mean square displacement"
+      ],
+      "files": [
+        {
+          "fileName": "3d-msd-diffusion.in",
+          "url": "3d-msd-diffusion/3d-msd-diffusion.in"
+        },
+        {
+          "fileName": "3d-msd-diffusion.ipynb",
+          "url": "3d-msd-diffusion/3d-msd-diffusion.ipynb"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+# Atomify commands start with #/
+
+# Move camera to a nice position
+#/camera position 20 85 55
+#/camera viewcenter 20 20 10
+
+# Set atom size and color
+#/atom 1 2.0 #ffffff
+# 2d Lennard-Jones gas
+units lj
+
+variable Tstart equal 0.1
+variable Tstop equal 0.6
+variable Tdamp equal 1
+variable rho equal 0.5
+
+dimension 2
+boundary p p p
+atom_style atomic
+lattice hex $(v_rho)
+region simbox block 0 40 0 20 -0.1 0.1
+create_box 1 simbox
+create_atoms 1 box
+mass 1 1.0
+velocity all create ${Tstart} 87287
+pair_style lj/cut 2.5
+pair_coeff 1 1 1.0 1.0 2.5
+
+compute mymsd all msd com yes
+variable mymsdv equal c_mymsd[4] 
+thermo_style custom time temp pe ke press c_mymsd[4] 
+
+fix 1 all nvt temp ${Tstart} ${Tstop} ${Tdamp}
+thermo 100
+run 100000
