@@ -112,5 +112,9 @@ python server.py
 
 and open
 https://andeplane.github.io/atomify/?examplesUrl=http://localhost:8000/examples.json&screen=examples.
+
+Recent Chrome versions ask for permission before a public site may talk to
+`localhost` ("Local Network Access"); if Atomify silently shows its default
+library, look for that prompt in the address bar and allow it, then reload.
 Remember to change `baseUrl` back before committing (`check_examples.py`
 warns while it points at localhost).
