@@ -1,0 +1,54 @@
+# Atomify commands start with #/
+
+# Set atom size and color
+#/atom 1 1.0 #ffffff
+
+# --- Settings: the one line to change -----------------------------------
+# Reduced number density rho* = N sigma^3 / V.  Try 0.01 (dilute gas) and
+# 0.5 (dense fluid); 0.1 is an interesting third point.
+variable rho equal 0.5
+variable T   equal 2.0       # reduced temperature (supercritical: no condensation)
+# ------------------------------------------------------------------------
+
+units lj
+boundary p p p
+atom_style atomic
+
+# 500 atoms on an fcc lattice; the lattice constant sets the density
+dimension 3
+lattice fcc ${rho}
+region simbox block 0 5 0 5 0 5
+create_box 1 simbox
+create_atoms 1 box
+
+# Define properties of the atoms
+mass 1 1.0
+velocity all create ${T} 87287
+pair_style lj/cut 2.5
+pair_coeff 1 1 1.0 1.0 2.5
+
+# Speed up simulation with neighbour lists
+neighbor 0.3 bin
+neigh_modify every 20 delay 0 check yes
+
+# A heat bath holding the temperature at T
+fix 1 all nvt temp ${T} ${T} 0.5
+
+# The compressibility factor Z = P / (rho k T): exactly 1 for an ideal gas.
+# Computed from explicit computes: the thermo keywords press/temp inside a
+# variable that thermo itself prints give a circular dependency in LAMMPS.
+compute myT all temp
+compute myP all pressure myT
+variable rhoN equal atoms/vol
+variable Z    equal c_myP/(v_rhoN*c_myT)
+
+# Define trajectory file name and content...
+dump 1 all custom 200 dump.lammpstrj id type x y z
+
+# Define thermodynamic data file (log.lammps)
+thermo_style custom time temp press v_rhoN v_Z pe ke
+thermo 50
+
+# run simulation + number of steps
+timestep 0.005
+run 10000

@@ -6,14 +6,15 @@
     {
       "id": "my-first-md-simulation",
       "title": "My first MD simulation",
-      "description": "We try out different settings and analyze the output.",
-      "analysisDescription": "# About this simulation\nWe try out different settings and analyze the output.",
+      "description": "672 atoms at ρ* = 0.65. Run T* = 0.3, 0.45 and 0.6 and measure the phase with the potential energy and the mean-square displacement.",
+      "analysisDescription": "# About this simulation\n672 atoms at ρ* = 0.65. Run T* = 0.3, 0.45 and 0.6 and measure the phase with the potential energy and the mean-square displacement.",
       "imageUrl": "my-first-md-simulation/my-first-md-simulation.jpg",
       "inputScript": "my-first-md-simulation.in",
       "keywords": [
-        "getting started",
+        "week 36",
+        "phases",
         "lennard jones",
-        "2-sided box"
+        "getting started"
       ],
       "files": [
         {
@@ -27,13 +28,38 @@
       ]
     },
     {
+      "id": "3d-msd-diffusion",
+      "title": "3D diffusion MSD",
+      "description": "Two kinds of atoms diffusing in a 3D liquid. The notebook fits the diffusion coefficient of each from ⟨Δr²⟩ = 6Dt and prints the ratio: find the line in the input file that makes them differ.",
+      "analysisDescription": "# About this simulation\nTwo kinds of atoms diffusing in a 3D liquid. The notebook fits the diffusion coefficient of each from ⟨Δr²⟩ = 6Dt and prints the ratio: find the line in the input file that makes them differ.",
+      "imageUrl": "3d-msd-diffusion/3d-msd-diffusion.jpg",
+      "inputScript": "3d-msd-diffusion.in",
+      "keywords": [
+        "week 36",
+        "diffusion",
+        "lennard jones",
+        "mean square displacement"
+      ],
+      "files": [
+        {
+          "fileName": "3d-msd-diffusion.in",
+          "url": "3d-msd-diffusion/3d-msd-diffusion.in"
+        },
+        {
+          "fileName": "3d-msd-diffusion.ipynb",
+          "url": "3d-msd-diffusion/3d-msd-diffusion.ipynb"
+        }
+      ]
+    },
+    {
       "id": "2d-melting",
       "title": "Melting of a 2D solid",
-      "description": "A quick and dirty demo of freezing, melting and evaporation.",
-      "analysisDescription": "# About this simulation\nA quick and dirty demo of freezing, melting and evaporation.",
+      "description": "Heat a 2D crystal at ρ* = 0.5 from T* = 0.1 to 0.6 and watch it melt and evaporate. The notebook plots the mean-square displacement and the pressure against temperature: find where the slopes change.",
+      "analysisDescription": "# About this simulation\nHeat a 2D crystal at ρ* = 0.5 from T* = 0.1 to 0.6 and watch it melt and evaporate. The notebook plots the mean-square displacement and the pressure against temperature: find where the slopes change.",
       "imageUrl": "2d-melting/2d-melting.jpg",
       "inputScript": "2d-melting.in",
       "keywords": [
+        "week 36",
         "phase transitions",
         "lennard jones",
         "melting"
@@ -52,12 +78,14 @@
     {
       "id": "heat-capacity-lj",
       "title": "Heat capacity of LJ",
-      "description": "A quick and dirty simulation to obtain the heat capacity.",
-      "analysisDescription": "# About this simulation\nA quick and dirty simulation to obtain the heat capacity.",
+      "description": "Raise the temperature slowly and read the heat capacity off the slope of energy against temperature. Does equipartition predict it?",
+      "analysisDescription": "# About this simulation\nRaise the temperature slowly and read the heat capacity off the slope of energy against temperature. Does equipartition predict it?",
       "imageUrl": "heat-capacity-lj/heat-capacity-lj.jpg",
       "inputScript": "heat-capacity-lj.in",
       "keywords": [
+        "week 36",
         "heat capacity",
+        "equipartition",
         "lennard jones"
       ],
       "files": [
@@ -72,25 +100,96 @@
       ]
     },
     {
-      "id": "3d-msd-diffusion",
-      "title": "3D diffusion MSD",
-      "description": "We measure the diffusion coefficient using the mean square displacement.",
-      "analysisDescription": "# About this simulation\nWe measure the diffusion coefficient using the mean square displacement.",
-      "imageUrl": "3d-msd-diffusion/3d-msd-diffusion.jpg",
-      "inputScript": "3d-msd-diffusion.in",
+      "id": "hot-cold-2d",
+      "title": "Hot and cold in contact",
+      "description": "A 2D crystal, one half at T* = 0.8 and the other at 0.2, released to Newton's equations. What is thermal equilibrium, and what is temperature?",
+      "analysisDescription": "# About this simulation\nA 2D crystal, one half at T* = 0.8 and the other at 0.2, released to Newton's equations. What is thermal equilibrium, and what is temperature?",
+      "imageUrl": "hot-cold-2d/hot-cold-2d.jpg",
+      "inputScript": "hot-cold-2d.in",
       "keywords": [
-        "diffusion",
-        "lennard jones",
-        "mean square displacement"
+        "bonus",
+        "temperature",
+        "thermal equilibrium",
+        "lennard jones"
       ],
       "files": [
         {
-          "fileName": "3d-msd-diffusion.in",
-          "url": "3d-msd-diffusion/3d-msd-diffusion.in"
+          "fileName": "hot-cold-2d.in",
+          "url": "hot-cold-2d/hot-cold-2d.in"
         },
         {
-          "fileName": "3d-msd-diffusion.ipynb",
-          "url": "3d-msd-diffusion/3d-msd-diffusion.ipynb"
+          "fileName": "hot-cold-2d.ipynb",
+          "url": "hot-cold-2d/hot-cold-2d.ipynb"
+        }
+      ]
+    },
+    {
+      "id": "pressure-3d",
+      "title": "Pressure at three densities",
+      "description": "500 atoms at T* = 2. Measure Z = P/(ρkT) at ρ* = 0.01 and 0.5: when is a gas ideal, and which way do the forces push?",
+      "analysisDescription": "# About this simulation\n500 atoms at T* = 2. Measure Z = P/(ρkT) at ρ* = 0.01 and 0.5: when is a gas ideal, and which way do the forces push?",
+      "imageUrl": "pressure-3d/pressure-3d.jpg",
+      "inputScript": "pressure-3d.in",
+      "keywords": [
+        "bonus",
+        "pressure",
+        "ideal gas",
+        "lennard jones"
+      ],
+      "files": [
+        {
+          "fileName": "pressure-3d.in",
+          "url": "pressure-3d/pressure-3d.in"
+        },
+        {
+          "fileName": "pressure-3d.ipynb",
+          "url": "pressure-3d/pressure-3d.ipynb"
+        }
+      ]
+    },
+    {
+      "id": "gas-box-2d",
+      "title": "Lecture: a box of gas at constant pressure",
+      "description": "Heat and cool a dilute 2D gas at constant pressure and watch the box grow and shrink: V ∝ T, with and without seeing the atoms.",
+      "analysisDescription": "# About this simulation\nHeat and cool a dilute 2D gas at constant pressure and watch the box grow and shrink: V ∝ T, with and without seeing the atoms.",
+      "imageUrl": "gas-box-2d/gas-box-2d.jpg",
+      "inputScript": "gas-box-2d.in",
+      "keywords": [
+        "lecture",
+        "lennard jones",
+        "ideal gas"
+      ],
+      "files": [
+        {
+          "fileName": "gas-box-2d.in",
+          "url": "gas-box-2d/gas-box-2d.in"
+        },
+        {
+          "fileName": "gas-box-2d.ipynb",
+          "url": "gas-box-2d/gas-box-2d.ipynb"
+        }
+      ]
+    },
+    {
+      "id": "arrow-of-time-2d",
+      "title": "Lecture: the arrow of time",
+      "description": "All atoms start in the left half; after trev steps every velocity is reversed. Short trev: they come back. Long trev: they never do.",
+      "analysisDescription": "# About this simulation\nAll atoms start in the left half; after trev steps every velocity is reversed. Short trev: they come back. Long trev: they never do.",
+      "imageUrl": "arrow-of-time-2d/arrow-of-time-2d.jpg",
+      "inputScript": "arrow-of-time-2d.in",
+      "keywords": [
+        "lecture",
+        "irreversibility",
+        "lennard jones"
+      ],
+      "files": [
+        {
+          "fileName": "arrow-of-time-2d.in",
+          "url": "arrow-of-time-2d/arrow-of-time-2d.in"
+        },
+        {
+          "fileName": "arrow-of-time-2d.ipynb",
+          "url": "arrow-of-time-2d/arrow-of-time-2d.ipynb"
         }
       ]
     }

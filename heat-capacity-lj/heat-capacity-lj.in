@@ -6,50 +6,56 @@
 
 # Set atom size and color
 #/atom 1 2.0 #ffffff
-#
-# Define variables
-############################################
-# dilute gas: rho = 0.005
+
+# --- Settings: the one line to change -----------------------------------
+# reduced density rho* = N sigma^3 / V
+# dilute gas: rho = 0.02   (dilute enough for an ideal gas, dense enough that the atoms collide)
 # liquid:     rho = 0.85
 # solid:      rho = 1.1
-variable rho equal 0.005
-############################################
+variable rho equal 0.02
+# ------------------------------------------------------------------------
 variable Tstart equal 0.7
-variable Tstop equal 1.8
-variable Tdamp equal 1
-variable N equal 100
-variable L equal ($N/${rho})^(1/3)
+variable Tstop  equal 1.8
+variable Tdamp  equal 0.5
+variable ncell  equal 6      # 6 x 6 x 6 fcc cells = 864 atoms
 
 # Use Lennard-Jones units, periodic boundaries and atomic model
 units lj
 boundary p p p
 atom_style atomic
 
-# Define the space and put atoms in
+# Define the space and put atoms in: an fcc lattice at the chosen density
+# (a dilute lattice turns into a gas within a few hundred steps)
 dimension 3
-region simbox block 0 $L 0 $L 0 $L
+lattice fcc ${rho}
+region simbox block 0 ${ncell} 0 ${ncell} 0 ${ncell}
 create_box 1 simbox
+create_atoms 1 box
 
 # Define properties of the atoms
-create_atoms 1 random $N 12345 simbox
 mass 1 1.0
 velocity all create ${Tstart} 87287
 pair_style lj/cut 2.5
 pair_coeff 1 1 1.0 1.0 2.5
 
-#make sure no explosion happens
-minimize 1e-4 1e-4 100 100
-
 # Speed up simulation with neighbour lists
 neighbor 0.3 bin
 neigh_modify every 20 delay 0 check yes
 
-# Define thermodynamic ensemble for thermalization
-fix 1 all nvt temp ${Tstart} ${Tstop} ${Tdamp}
-#fix nvt all nvt temp $T $T 0.7
+# Mean-square displacement of the atoms: flat in a solid, growing in a fluid
+compute msd all msd com yes
 
-
-thermo_style custom time temp pe ke 
+# Define thermodynamic data file (log.lammps): etotal = pe + ke
+thermo_style custom time temp pe ke etotal c_msd[4]
 thermo 100
-run 50000
+timestep 0.005
 
+# 1. Equilibrate at Tstart with a heat bath
+fix 1 all nvt temp ${Tstart} ${Tstart} ${Tdamp}
+run 5000
+
+# 2. Slowly raise the heat-bath temperature from Tstart to Tstop; the heat
+#    capacity is the slope of the total energy against the temperature
+unfix 1
+fix 1 all nvt temp ${Tstart} ${Tstop} ${Tdamp}
+run 25000
