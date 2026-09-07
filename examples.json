@@ -4,6 +4,53 @@
   "descriptionFile": "description.md",
   "examples": [
     {
+      "id": "compressibility-factor",
+      "title": "Compressibility factor",
+      "description": "We calculate the compressibility factor at different states in the LJ phase diagram.",
+      "analysisDescription": "# About this simulation\nWe calculate the compressibility factor.",
+      "imageUrl": "compressibility-factor/compressibility-factor.png",
+      "inputScript": "compressibility-factor.in",
+      "keywords": [
+        "week 37 exercises",
+        "Lennard-Jones",
+        "Compressibility factor"
+      ],
+      "files": [
+        {
+          "fileName": "compressibility-factor.in",
+          "url": "compressibility-factor/compressibility-factor.in"
+        },
+        {
+          "fileName": "compressibility-factor.ipynb",
+          "url": "compressibility-factor/compressibility-factor.ipynb"
+        }
+      ]
+    },
+    {
+      "id": "maxwell-boltzmann",
+      "title": "Maxwell-Boltzmann speed distribution",
+      "description": "We calculate the speed distribution for gas, liquid and solid.",
+      "analysisDescription": "# About this simulation\nCalculate the speed distribution.",
+      "imageUrl": "maxwell-boltzmann/maxwell-boltzmann.png",
+      "inputScript": "maxwell-boltzmann.in",
+      "keywords": [
+        "week 37 exercises",
+        "lennard jones",
+        "Maxwell-Boltzman",
+        "Speed distribution"
+      ],
+      "files": [
+        {
+          "fileName": "maxwell-boltzmann.in",
+          "url": "maxwell-boltzmann/maxwell-boltzmann.in"
+        },
+        {
+          "fileName": "maxwell-boltzmann.ipynb",
+          "url": "maxwell-boltzmann/maxwell-boltzmann.ipynb"
+        }
+      ]
+    },
+    {
       "id": "my-first-md-simulation",
       "title": "My first MD simulation",
       "description": "672 atoms at ρ* = 0.65. Run T* = 0.3, 0.45 and 0.6 and measure the phase with the potential energy and the mean-square displacement.",
