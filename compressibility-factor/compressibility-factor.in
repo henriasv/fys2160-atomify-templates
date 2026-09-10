@@ -1,5 +1,5 @@
 # Define variables
-# Starting temperature:
+# Thermostat target temperature:
 variable T equal 1
 # Number of particles:
 variable N equal 1024
@@ -41,9 +41,8 @@ fix nvt all nvt temp $T $T 1
 #Thermalization run
 run 10000
 
-# Define thermodynamic ensemble for long run
-unfix nvt
-fix nve all nve
+# Keep the same NVT thermostat active during production.
+# Equilibration is excluded from the pressure averages below.
 
 #Define frequency of thermodynamic output and trajectory dump and start production run
 thermo_style custom time temp atoms vol press
