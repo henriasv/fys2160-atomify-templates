@@ -4,6 +4,58 @@
   "descriptionFile": "description.md",
   "examples": [
     {
+      "id": "heatcap-atomic-lj",
+      "title": "Heat capacity and compressibility of atomic Lennard-Jones",
+      "description": "We calculate the heat capacity and compressibility factor at different states in the LJ phase diagram.",
+      "analysisDescription": "# About this simulation\nWe calculate the heat capacity and compressibility factor.",
+      "imageUrl": "heatcap-atomic-lj/heatcap-atomic-lj.png",
+      "inputScript": "heatcap-atomic-lj.in",
+      "keywords": [
+        "Lab 1",
+        "Lennard-Jones",
+        "Heat capacity",
+        "Compressibility factor"
+      ],
+      "files": [
+        {
+          "fileName": "heatcap-atomic-lj.in",
+          "url": "heatcap-atomic-lj/heatcap-atomic-lj.in"
+        },
+        {
+          "fileName": "heatcap-atomic-lj.ipynb",
+          "url": "heatcap-atomic-lj/heatcap-atomic-lj.ipynb"
+        }
+      ]
+    },
+    {
+      "id": "heatcap-diatomic-lj",
+      "title": "Heat capacity of diatomic LJ",
+      "description": "We calculate the heat capacity for diatomic Lennard-Jones molecules.",
+      "analysisDescription": "# About this simulation\nHeat capacity of diatomic LJ.",
+      "imageUrl": "heatcap-diatomic-lj/heatcap-diatomic-lj.png",
+      "inputScript": "heatcap-diatomic-lj.in",
+      "keywords": [
+        "Lab 1",
+        "lennard jones",
+        "Diatomic molecule",
+        "Heat capacity"
+      ],
+      "files": [
+        {
+          "fileName": "heatcap-diatomic-lj.in",
+          "url": "heatcap-diatomic-lj/heatcap-diatomic-lj.in"
+        },
+        {
+          "fileName": "diat.molecule",
+          "url": "heatcap-diatomic-lj/diat.molecule"
+        },
+        {
+          "fileName": "heatcap-diatomic-lj.ipynb",
+          "url": "heatcap-diatomic-lj/heatcap-diatomic-lj.ipynb"
+        }
+      ]
+    },
+    {
       "id": "compressibility-factor",
       "title": "Compressibility factor",
       "description": "We calculate the compressibility factor at different states in the LJ phase diagram.",

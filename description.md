@@ -4,6 +4,14 @@ Statistical mechanics allows us to go from the atomic hypothesis to theories for
 
 The examples below are part of the curriculum of the course FYS2160 Thermal and statistical physics. Chrome or Firefox; Safari cannot run the simulation engine.
 
+# Lab 1 — Gas thermodynamics
+
+**Heat capacity and compressibility of atomic Lennard-Jones** — add heat to an atomic fluid and analyse its temperature and pressure.
+
+**Heat capacity of diatomic LJ** — compare flexible and rigid molecular bonds. The project includes the molecule definition needed by the simulation.
+
+Open either **Lab 1** card with **Use as project**. After each completed simulation, rerun the notebook's load cell and then its plots and analysis. Keep the lab exercise sheet alongside the notebook.
+
 # Weekly exercise, week 37
 
 ## Compressibility factor
