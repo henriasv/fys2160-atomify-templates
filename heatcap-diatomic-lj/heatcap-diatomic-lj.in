@@ -64,7 +64,7 @@ fix heat all heat 1 ${eFlux} region simbox
 run 1000
 
 #Define frequency of thermodynamic output and trajectory dump and start production run
-thermo_style custom step temp epair etotal press
+thermo_style custom step temp epair etotal press atoms vol 
 thermo 100
 # Set filename of log filename
 log log-diatom-T$T-rho${rho}-eFlux${eFlux}-rigidbond${rigidbond}.lammps
