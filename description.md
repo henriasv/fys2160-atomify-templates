@@ -12,6 +12,12 @@ The examples below are part of the curriculum of the course FYS2160 Thermal and 
 
 Open either **Lab 1** card with **Use as project**. After each completed simulation, rerun the notebook's load cell and then its plots and analysis. Keep the lab exercise sheet alongside the notebook.
 
+# Lab 2 — Ice, water and vapour
+
+**Lab 2: ice, water and vapour** — follow the [semester lab instructions](https://www.uio.no/studier/emner/matnat/fys/FYS2160/h26/obligs_labs/lab2/lab2.pdf), section II A. Open the card with **Use as project**. Run ice, melting and expansion in sequence, and rerun the notebook after each stage to plot the output and keep the configuration for the next run.
+
+For evaporation, use the supplied `log_400k.lammps` and `traj_400k.lammpstrj` from the [Lab 2 data page](https://www.uio.no/studier/emner/matnat/fys/FYS2160/h26/obligs_labs/lab2/data/). The notebook explains how to select the log. Inspect the molecular structures, take screenshots and compare energy and enthalpy with the experiment.
+
 # Weekly exercise, week 37
 
 ## Compressibility factor
