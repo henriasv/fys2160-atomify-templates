@@ -1,0 +1,48 @@
+#/camera position 5.3 9.9 62.2
+#/camera target 2.6 0.7 0.7
+## Set temperature
+variable Told equal 250
+variable Tnew equal 251
+variable runlength equal 1000
+
+units real
+atom_style full
+
+pair_style lj/cut/coul/long 10.0
+bond_style harmonic
+angle_style harmonic
+pair_modify tail yes
+kspace_style pppm 1.0e-5
+pair_modify tail no
+read_data data.${Told}K
+
+group hydrogen type 1
+group oxygen type 2
+
+neighbor 2.0 bin
+neigh_modify every 10 delay 0 check yes
+
+timestep 2.0
+
+fix constrain all shake 1.0e-4 100 0 b 1 a 1
+
+####### Change size of simulation cell 
+#fix 2 all deform 1 x scale 10 y scale 10 z scale 10
+
+####### Choose one of the two: NVT or NPT ########
+####### NVT: Run simulation at constant volume and temperature
+#fix integrate all nvt temp ${Tnew} ${Tnew} 200.0
+####### NPT: Run simulation at constant pressure and temperature
+fix 1 all npt temp ${Tnew} ${Tnew} 300.0 iso 1.0 1.0 1000.0
+
+
+# Thermodynamic output
+thermo_style custom step temp etotal enthalpy
+thermo 100
+log log_${Tnew}K.lammps
+
+# Trajectory output
+dump trj all atom 100 traj_${Tnew}K.lammpstrj
+
+run ${runlength}
+write_data data.${Tnew}K

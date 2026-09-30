@@ -1,0 +1,31 @@
+{
+  "source": "https://github.com/dysthe/atomify",
+  "revision": "f60269065df113eb1a3744428a2c2eb9a0e634ff",
+  "directory": "lab2/ice2water2vapour",
+  "scope": "Original protocol, compatibility-only notebook changes; not the heater pilot.",
+  "unchanged_files_sha256": {
+    "ice2water2vapour.in": "3b0cb03f44756fc92ee4aadbc263aca2ec0c268a4494e5df734c351b7ab0e027",
+    "data.250K": "89e5c8069cae8384702d8c2aae71bb3482ef23051ab17f7cb3579d32ff0e1307"
+  },
+  "notebook_changes": [
+    "Package installation and Pyodide kernel metadata",
+    "Latest runs/*/log_*K.lammps selection",
+    "Copy completed checkpoint back to project files",
+    "Workflow and known-limitations note; original questions and plotting cell unchanged"
+  ],
+  "validation": "Original native-stage and plotting validation in course-materials/lab2-validation; no new physical protocol claimed.",
+  "compatibility_validation": {
+    "date": "2026-09-30",
+    "input_and_starting_data_byte_identical": true,
+    "original_plotting_cell_unchanged": true,
+    "local_log_temperatures_K": [
+      251,
+      310,
+      311,
+      400
+    ],
+    "plots_per_log": 3,
+    "checkpoint_copy_byte_identical": true,
+    "scope": "Notebook compatibility tested against prior recorded native runs; does not reclassify the original simulation protocol as numerically validated."
+  }
+}

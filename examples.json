@@ -56,6 +56,34 @@
       ]
     },
     {
+      "id": "ice2water2vapour",
+      "title": "Lab 2: ice, water and vapour (2025 version)",
+      "description": "Last year's water phase-change exercise, adapted to the current Atomify project and notebook workflow.",
+      "analysisDescription": "# Lab 2 — original exercise\nRun each stage, inspect the energy and enthalpy, and use the notebook to carry its saved configuration into the next run. Original numerical limitations are documented in the notebook.",
+      "imageUrl": "ice2water2vapour/ice2water2vapour.jpg",
+      "inputScript": "ice2water2vapour.in",
+      "keywords": [
+        "Lab 2",
+        "Water",
+        "Melting",
+        "Vapour"
+      ],
+      "files": [
+        {
+          "fileName": "ice2water2vapour.in",
+          "url": "ice2water2vapour/ice2water2vapour.in"
+        },
+        {
+          "fileName": "data.250K",
+          "url": "ice2water2vapour/data.250K"
+        },
+        {
+          "fileName": "ice2water2vapour.ipynb",
+          "url": "ice2water2vapour/ice2water2vapour.ipynb"
+        }
+      ]
+    },
+    {
       "id": "compressibility-factor",
       "title": "Compressibility factor",
       "description": "We calculate the compressibility factor at different states in the LJ phase diagram.",
