@@ -59,7 +59,7 @@
       "id": "ice2water2vapour",
       "title": "Lab 2: ice, water and vapour",
       "description": "Observe ice, melting water and vapour, and analyse total energy and enthalpy following the Lab 2 instructions.",
-      "analysisDescription": "# Lab 2: ice, water and vapour\nFollow the [semester lab instructions](https://www.uio.no/studier/emner/matnat/fys/FYS2160/h26/obligs_labs/lab2/lab2.pdf). Run ice, melting and expansion in sequence, using the notebook to keep each final configuration for the next stage. Analyse the supplied evaporation log and trajectory from the [Lab 2 data page](https://www.uio.no/studier/emner/matnat/fys/FYS2160/h26/obligs_labs/lab2/data/).",
+      "analysisDescription": "# Lab 2: ice, water and vapour\nFollow the [semester lab instructions](https://www.uio.no/studier/emner/matnat/fys/FYS2160/h26/obligs_labs/lab2/lab2.pdf). Run ice, melting and expansion in sequence. Before each new stage, copy the preceding run's `data.<Tnew>K` from its run folder into the main project folder (notebook file browser, or the notebook's final cell). Analyse the supplied evaporation log and trajectory from the [Lab 2 data page](https://www.uio.no/studier/emner/matnat/fys/FYS2160/h26/obligs_labs/lab2/data/).",
       "imageUrl": "ice2water2vapour/ice2water2vapour.jpg",
       "inputScript": "ice2water2vapour.in",
       "keywords": [

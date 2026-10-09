@@ -4,6 +4,10 @@
 variable Told equal 250
 variable Tnew equal 251
 variable runlength equal 1000
+## Each run saves its final configuration, data.<Tnew>K, in its own run folder
+## (runs/run-NNN). Before the next stage, copy that file into the main project
+## folder, where read_data looks for data.<Told>K: in the Notebook tab's file
+## browser, Copy it from the run folder and Paste it in the top folder.
 
 units real
 atom_style full
